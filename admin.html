@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Novira Store | Admin Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      NOVIRA<span>STORE.</span>
+    </a>
+
+    <a href="index.html" class="admin-link">
+      Halaman Pelanggan ↗
+    </a>
+  </nav>
+
+  <main class="admin-container">
+
+    <!-- LOGIN ADMIN -->
+    <section id="loginSection" class="login-box">
+
+      <div class="card-heading">
+        <span class="eyebrow">PRIVATE ACCESS</span>
+
+        <h2>Welcome Back!</h2>
+
+        <p>
+          Login untuk mengakses dashboard Novira Store.
+        </p>
+      </div>
+
+      <form id="loginForm">
+
+        <div class="form-group">
+          <label for="email">Email Admin</label>
+
+          <input
+            type="email"
+            id="email"
+            placeholder="Masukkan email admin"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+
+          <input
+            type="password"
+            id="password"
+            placeholder="Masukkan password"
+            required
+          >
+        </div>
+
+        <button type="submit" id="loginBtn">
+          Login Dashboard →
+        </button>
+
+        <p id="loginStatus"></p>
+
+      </form>
+    </section>
+
+
+    <!-- DASHBOARD ADMIN -->
+    <section id="dashboard" style="display: none;">
+
+      <div class="admin-title">
+
+        <span class="eyebrow">
+          NOVIRA STORE MANAGEMENT
+        </span>
+
+        <h1>Dashboard Overview.</h1>
+
+        <p>
+          Kelola dan pantau seluruh ulasan pelanggan kamu.
+        </p>
+
+      </div>
+
+
+      <!-- STATISTIK -->
+      <div class="stats">
+
+        <div class="stat-box">
+          <p>Total Ulasan</p>
+          <h2 id="totalUlasan">0</h2>
+        </div>
+
+        <div class="stat-box">
+          <p>Rata-rata Rating</p>
+          <h2 id="rataRating">0.0</h2>
+        </div>
+
+        <div class="stat-box">
+          <p>Produk Diulas</p>
+          <h2 id="jumlahProduk">0</h2>
+        </div>
+
+      </div>
+
+
+      <!-- DAFTAR ULASAN -->
+      <div class="admin-card">
+
+        <h2>Customer Reviews</h2>
+
+        <select id="filterProduk">
+          <option value="">Semua Produk</option>
+
+          <option value="Bola Susu Pelangi">
+            Bola Susu Pelangi
+          </option>
+
+          <option value="Bola Susu Milo">
+            Bola Susu Milo
+          </option>
+
+          <option value="Keripik Pisang Coklat">
+            Keripik Pisang Coklat
+          </option>
+        </select>
+
+        <div id="ulasanList">
+          Memuat ulasan pelanggan...
+        </div>
+
+      </div>
+
+
+      <!-- LOGOUT -->
+      <button
+        class="logout-btn"
+        id="logoutButton"
+        type="button"
+      >
+        Logout Admin
+      </button>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <a href="index.html" class="logo footer-logo">
+      NOVIRA<span>STORE.</span>
+    </a>
+
+    <p>Admin Dashboard · Novira Store</p>
+
+    <small>© 2026 Novira Store</small>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script type="module" src="admin.js"></script>
+
+</body>
+</html>
